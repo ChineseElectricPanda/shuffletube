@@ -53,6 +53,11 @@ export default class Room extends React.Component {
     setTimeout(() => {e.target.playVideo()});
   }
 
+  error(e) {
+    console.log(e);
+    this.next(e);
+  }
+
   enablePlayback() {
     this.setState({enablePlayback: true})
   }
@@ -72,6 +77,7 @@ export default class Room extends React.Component {
                   videoId={this.props.currentTrack.url}
                   onReady={e =>  e.target.playVideo()}
                   onEnd={this.next.bind(this)}
+                  onError={this.error.bind(this)}
                   opts={{autoplay: 1}}
                 />  
               ) : (
