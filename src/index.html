@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+    try{
+        window.nodeRequire = require;
+        delete window.require;
+        delete window.exports;
+        delete window.module;
+    } catch(e) {}
+</script>
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--Import materialize.css-->
+<link type="text/css" rel="stylesheet" href="/css/materialize.min.css"  media="screen,projection"/>
+<!--Materialize icons-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/materialize.min.js"></script>
+<style>
+    html, body, #app {
+        height: 100%;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    ::-webkit-scrollbar {
+        width: 3px;
+    }
+     
+    ::-webkit-scrollbar-track {
+        display: none;
+    }
+     
+    ::-webkit-scrollbar-thumb {
+        background-color: darkgrey;
+        border-radius: 10px;
+    }
+
+    .container .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+</style>
+</head>
+
+<body>
+<div id="app"></div>
+<script src="/client.min.js"></script>
+</body>
+</html>
